@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="btl.dictionary">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:banner="@mipmap/ic_launcher_info"
+        android:icon="@mipmap/ic_launcher_info"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_info"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChiTietTu"
+            android:label="Thông tin từ"
+            android:parentActivityName=".TuDienVietAnhActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TuDienVietAnhActivity" />
+        </activity>
+        <activity
+            android:name=".TuDienVietAnhActivity"
+            android:label="Từ Điển Anh Việt"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".DichVanBanActivity"
+            android:label="Dịch Văn Bản"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ThemTuActivity"
+            android:label="Thêm từ"
+            android:parentActivityName=".MyWord">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyWord" />
+        </activity>
+        <activity
+            android:name=".TuVungQuanTrongActivity"
+            android:label="Từ Yêu Thích"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <!-- <activity android:name=".TuCuaBanActivity" -->
+        <!-- android:label="Từ Yêu Thích" -->
+        <!-- android:parentActivityName=".MainActivity"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value=".MainActivity" /> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".InfoActivity"
+            android:label="Thông tin phần mềm, nhóm"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".UpdateWordActivity"
+            android:label="Cập nhật từ"
+            android:parentActivityName=".TuDienVietAnhActivity" />
+        <activity
+            android:name=".MyWord"
+            android:label="Từ của tôi"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
